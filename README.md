@@ -1,53 +1,29 @@
 # Correlations_fitting
 
-This repository contains tools for fitting and analyzing correlations in scientific data, with a focus on photovoltaic and materials science applications.
+A Jupyter notebook for plotting and fitting correlation data between energy levels and voltage losses in organic solar cells.
 
-## What the Project Does
+## Files
 
-This project provides Jupyter notebook-based tools for:
-- Fitting correlation functions to experimental data
-- Analyzing relationships between different material properties
-- Visualizing correlation patterns in photovoltaic device data
-- Statistical analysis of experimental measurements
+| File | Description |
+|------|-------------|
+| `Correlation_Plot_Fit.ipynb` | Main notebook containing plotting and fitting functions |
 
-## Methods and Algorithms Used
+## Main Function
 
-The fitting routines employ:
-- **Least-squares regression** for parameter optimization
-- **Non-linear curve fitting** using scipy.optimize
-- **Statistical correlation analysis** (Pearson/Spearman correlations)
-- **Data interpolation and smoothing** techniques
-- **Custom fitting functions** tailored to specific physical models
+**`plot_deltaE_vs_deltaVrad(csv_path)`**
 
-## Input/Output Formats
-
-**Input:**
-- CSV files with experimental data
-- Text files with tabular measurements
-- Dataframes with multiple variables for correlation analysis
-
-**Output:**
-- Fitted parameters with confidence intervals
-- Correlation matrices and statistical summaries
-- Publication-quality plots (PNG/PDF)
-- Processed data tables
+Reads a CSV file with columns `E_CT-S1`, `Delta_V_rad`, and `Name`, then:
+- Plots scatter points for each data point
+- Performs linear fit (y = mx + b)
+- Adds text labels for each point
+- Draws horizontal reference line at y = 0.005
+- Marks intersection point of fit line with reference line
 
 ## Dependencies
 
-- Python 3.x
-- NumPy
-- Pandas
-- Matplotlib
-- SciPy
-- Jupyter Notebook
-
-## Example Usage
-
-Open `Correlation_Plot_Fit.ipynb` in Jupyter Notebook and follow the step-by-step workflow:
-1. Load your experimental data
-2. Select the correlation model to fit
-3. Run the fitting routine
-4. Visualize results and export fitted parameters
+- numpy
+- pandas
+- matplotlib
 
 ## Author
 
