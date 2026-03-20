@@ -25,7 +25,3 @@ This repository contains Jupyter notebooks for fitting and analyzing correlation
 ## Author
 
 mzjswjz
-
-## License
-
-MIT
